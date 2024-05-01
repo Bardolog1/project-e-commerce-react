@@ -8,7 +8,7 @@ const NavBarItem = (
   <>
     <li>
         <a href={url}>
-            {props.icon ? <icon className={props.icon} /> : title}
+            {props.titleActive=== 'true'? title : <icon className={props.icon? props.icon : ""} />}
         </a>
     </li>
   </>

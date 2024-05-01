@@ -22,14 +22,13 @@ const NavBar = ({items,...props}) => {
                 
                 
                 <ul className="right">
-                    <li> <SearchBar></SearchBar> </li>
+                    {props.searchBar? <li> <SearchBar></SearchBar> </li>: null}
                     {items.map((item, index) => (
                         <NavBarItem key={index} title={item.title} url={item.url} icon={item.icon} titleActive={item.titleActive}></NavBarItem>
                     ))
                     }
-                    <li> <ToggleButton> </ToggleButton></li>
+                    {props.darkMode? <li> <ToggleButton> </ToggleButton></li>: null}
                 </ul>
-           
         </div>
     </div>
     </>

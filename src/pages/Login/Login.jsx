@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
 import InputDefault from '../../components/InputDefault/InputDefault.jsx';
+import TextDefault from '../../components/TextDefault/TextDefault.jsx';
 
 const Login = () => {
   return (
@@ -8,11 +9,10 @@ const Login = () => {
         <div className="login">
             <div className="container">
                 <div className="login-form">
-                    <h1>Login</h1>
+                    <TextDefault type="title" darkMode={true}>Login</TextDefault>
                     <form>
                         <InputDefault type="text" placeholder="Username"  darkMode={true}/>
                         <InputDefault type="password" placeholder="password"  darkMode={true}/>
-                       
                     </form>
                 </div>
             </div>
@@ -24,6 +24,3 @@ const Login = () => {
 
 export default Login
 
-/*  <input type="text" placeholder="Username"/>
-                        <input type="password" placeholder="Password"/>
-                        <button>Log in</button>*/

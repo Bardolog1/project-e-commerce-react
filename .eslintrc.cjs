@@ -15,6 +15,7 @@ module.exports = {
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',
+      { allowMultipleDeclarations: true},
       { allowConstantExport: true },
     ],
   },

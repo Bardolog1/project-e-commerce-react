@@ -38,8 +38,6 @@ const ToggleButton = () => {
                 <span className="slider round">
                         {theme === 'light' ? clouds() : stars()}
                     <span className="btnTheme">
-                        
-                        
                     </span>
                 </span>
             </label>

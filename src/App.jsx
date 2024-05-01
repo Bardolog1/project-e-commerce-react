@@ -27,10 +27,12 @@ function App() {
       titleActive: "false",
     },
   ];
+  
+  const logo = "https://seeklogo.com/images/M/mercado-libre-logo-2322FACE00-seeklogo.com.png";
 
   return (
     <>
-      <NavBar items={items} darkMode={true} searchBar={true} />
+      <NavBar items={items} darkMode={true} searchBar={true} logo={logo}/>
       <Login></Login>
     </>
   );

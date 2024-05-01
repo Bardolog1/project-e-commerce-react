@@ -16,7 +16,8 @@ const NavBar = ({items,...props}) => {
                 
                 <div className="left">
                     <div className="logo">
-                        <img src="" alt="logo"/>
+                        <img src={props.logo}
+                        alt="logo"/>
                     </div>
                 </div>
                 

@@ -185,7 +185,7 @@ input:checked + .slider .btnTheme::before {
   padding: 0.2em; 
   color: #fffb00;
   font-size: 0; 
-  transition: font-size .2s; 
+  transition: font-size .8s; 
 }
 
 
@@ -195,5 +195,5 @@ input:checked + .slider .btnTheme::before {
   padding: 0.2em; 
   color: #ffffff;
   font-size: 0; 
-  transition: font-size .6s; 
+  transition: font-size .8s; 
 }

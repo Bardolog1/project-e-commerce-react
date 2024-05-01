@@ -4,6 +4,6 @@
 }
 
 li a{
-    color: white;
+    color: var(--primary-color-text-fixed);
     text-decoration: none;
 }

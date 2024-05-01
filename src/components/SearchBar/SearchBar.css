@@ -12,8 +12,8 @@
 */
 
 .search-bar{
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color-fixed);
+    color: var(--primary-color-text-fixed);
     padding: 10px 0;
 }
 

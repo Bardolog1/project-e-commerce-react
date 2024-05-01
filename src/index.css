@@ -2,8 +2,10 @@
 
 :root{
     --body-background: #f5f5f5;
-    --primary-color: #333;
+    --primary-color: #ffef0a;
     --primary: blue;
+    --primary-color-fixed: #ffef0a;
+    --primary-color-text-fixed: #333;
 }
 
 [data-theme='dark']{
@@ -14,7 +16,7 @@
 
 [data-theme='light']{
     --body-background: white;
-    --primary-color: #333;
+    --primary-color: #ffef0a;
     --primary: blue;
 }
 

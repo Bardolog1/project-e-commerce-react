@@ -1,7 +1,6 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login.jsx";
 
 function App() {
   const items = [

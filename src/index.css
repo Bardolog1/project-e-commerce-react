@@ -11,13 +11,13 @@
 [data-theme='dark']{
     --body-background: rgb(52,52,52);
     --primary-color: white;
-    --primary: rgb(97,97,255);
+
 }
 
 [data-theme='light']{
     --body-background: white;
-    --primary-color: #ffef0a;
-    --primary: blue;
+    --primary-color: #333;
+   
 }
 
 *{

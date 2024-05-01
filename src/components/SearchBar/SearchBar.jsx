@@ -6,7 +6,7 @@ const SearchBar = () => {
     <>
     <div className="search-bar">
         <div className="containerSearch">
-            <input type="text" placeholder="Search..."/>
+            <input className="searchInput" type="text" placeholder="Search..."/>
             <i className="fa-solid fa-search"></i>
         </div>
         

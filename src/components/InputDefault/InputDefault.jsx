@@ -10,7 +10,6 @@ const Input = styled.input`
   border: none;
 
   &.ambiented {
- 
     background-color: var(--body-background);
     border-bottom: 1px solid var(--primary-color);
     color: var(--primary-color);
@@ -25,6 +24,7 @@ const InputDefault = ({ ...props }) => {
         type={props.type}
         placeholder={props.placeholder}
         className={props.darkMode ? "ambiented" : ""}
+        {...props}
       />
     </>
   );

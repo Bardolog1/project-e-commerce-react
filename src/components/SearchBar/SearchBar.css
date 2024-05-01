@@ -1,0 +1,56 @@
+/*
+ <>
+    <div className="search-bar">
+        <div className="container">
+            <input type="text" placeholder="Search..."/>
+            <i className="fa-solid fa-search"></i>
+        </div>
+        
+    </div>
+    </>
+  )
+*/
+
+.search-bar{
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.containerSearch{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    background: white;
+    border-radius: 20px;
+}
+
+.container input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.container input:focus{
+    outline: none;
+}
+
+
+
+.container i{
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    padding: 10px;
+    background:transparent;
+    border-radius: 5px;
+}
+.container i:hover{
+   transition: 0.3s;
+   color: rgba(51, 51, 51, 0.5);
+   cursor: pointer;
+}
+.container i:active{
+    transform: scale(0.9);
+}

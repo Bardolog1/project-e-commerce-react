@@ -1,0 +1,9 @@
+ li {
+    list-style: none;
+    display: inline;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}

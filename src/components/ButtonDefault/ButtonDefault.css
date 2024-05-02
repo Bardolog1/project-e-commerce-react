@@ -1,0 +1,27 @@
+.button-default{
+    display: flex;
+    background-color: var(--primary-color-fixed);
+    color: var(--primary-color-text-fixed);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.button-default:hover{
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.button-default:active{
+    opacity: 0.6 ;
+    transform: scale(0.98);
+}
+
+.button-default:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+
+}

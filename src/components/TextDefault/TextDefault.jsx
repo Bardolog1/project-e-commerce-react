@@ -24,6 +24,16 @@ const TextDefault = ({type, darkMode, ...props}) => {
         }
     `;
     
+    const ButtonText = styled.p`
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--primary-color-text-fixed);
+
+        &.ambiented {
+        color: var(--primary-color);
+        }
+    `;
+    
     const Paragraph = styled.p`
         font-size: 1rem;
         color: var(--primary-color-text-fixed);
@@ -39,6 +49,7 @@ const TextDefault = ({type, darkMode, ...props}) => {
         {
             type === 'title' ? <Title className={darkMode ? "ambiented" : ""} {...props} /> :
             type === 'subtitle' ? <SubTitle  className={darkMode ? "ambiented" : ""}{...props} /> :
+            type === 'buttonText' ? <ButtonText  className={darkMode ? "ambiented" : ""}{...props} /> :
             <Paragraph  className={darkMode ? "ambiented" : ""}{...props} />
            
         }

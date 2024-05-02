@@ -3,11 +3,17 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 60px;
-    grid-row-gap: 60px;
-    margin: 3em;
-    
+    grid-row-gap: 30px;
+    margin: 2em;
+    grid-template-areas:
+    "title title"
+    "input input"
+    "input input"
+    "btnRegister btnRegister";
     
     }
+    
+    
     
     
 

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const TextDefault = ({type, darkMode, ...props}) => {
 
     const Title = styled.h1`
-        font-size: 1.5rem;
+        font-size: 1.5rem; 
         color: var(--primary-color-text-fixed);
         font-weight: 800;
         

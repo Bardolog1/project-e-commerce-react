@@ -11,7 +11,7 @@ const NavBar = ({items,...props}) => {
   return (
     <>
     <div className="navbar" >
-        <div className="container">
+        <div className="container-navbar">
             
                 
                 <div className="left">
@@ -32,6 +32,8 @@ const NavBar = ({items,...props}) => {
                     }
                     {props.darkMode? <li> <ToggleButton> </ToggleButton></li>: null}
                 </ul>
+                
+                
         </div>
     </div>
     </>

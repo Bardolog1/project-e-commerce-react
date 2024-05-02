@@ -1,16 +1,3 @@
-/*
- <>
-    <div className="search-bar">
-        <div className="container">
-            <input type="text" placeholder="Search..."/>
-            <i className="fa-solid fa-search"></i>
-        </div>
-        
-    </div>
-    </>
-  )
-*/
-
 .search-bar{
     background-color: var(--primary-color-fixed);
     color: var(--primary-color-text-fixed);
@@ -27,30 +14,30 @@
     border-radius: 20px;
 }
 
-.container .searchInput{
+.containerSearch .searchInput{
     width: 100%;
     padding: 10px;
     border: none;
 }
 
-.container input:focus{
+.containerSearch .searchInput:focus{
     outline: none;
 }
 
 
 
-.container i{
+.containerSearch i{
     font-size: 20px;
     color: rgb(51, 51, 51);
     padding: 10px;
     background:transparent;
     border-radius: 5px;
 }
-.container i:hover{
+.containerSearch i:hover{
    transition: 0.3s;
    color: rgba(51, 51, 51, 0.5);
    cursor: pointer;
 }
-.container i:active{
+.containerSearch i:active{
     transform: scale(0.9);
 }

@@ -16,8 +16,10 @@ const NavBar = ({items,...props}) => {
                 
                 <div className="left">
                     <div className="logo">
-                        <img src={props.logo}
-                        alt="logo"/>
+                        <a href={props.logo.redirect} rel="noreferrer">
+                        <img src={props.logo.src}
+                        alt={props.logo.alt}/>
+                        </a>
                     </div>
                 </div>
                 

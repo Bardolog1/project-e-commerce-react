@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-areas: "name name" "email email" "password password";
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+    margin: 3em;
     
     
     }

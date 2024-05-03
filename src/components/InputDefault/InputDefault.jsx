@@ -11,7 +11,7 @@ const Input = styled.input`
   height: 100%;
 
   &.ambiented {
-    background-color: var(--body-background);
+    background-color: transparent;
     border-bottom: 1px solid var(--primary-color);
     color: var(--primary-color);
   }
@@ -30,6 +30,7 @@ const Input = styled.input`
     transform: translate(0, 0);
     font-size: 0.8em;
     color: var( --primary-color-text-contrast);
+    z-index: 1;
   }
   
 `;
@@ -41,7 +42,12 @@ const Label = styled.label`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
+  z-index: -1;
+  
+  &:active{
+    transform: translate(-50%, -50%) scale(0.9);
+  }
   
 `;
 

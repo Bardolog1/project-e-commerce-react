@@ -22,10 +22,18 @@ const LoginForm = () => {
           Login to
         </TextDefault>
         <form className="formLogin">
-          <InputDefault type="text" placeholder="Username" darkMode={true} />
           <InputDefault
+          required
+            decorated={true}
+            label="Username" 
+            type="text" 
+            darkMode={true} 
+          />
+          <InputDefault
+            required
+            decorated={true}
+            label="Password"
             type="password"
-            placeholder="password"
             darkMode={true}
           />
           <ButtonDefault style={styles.buttonLogin} darkMode={true}>

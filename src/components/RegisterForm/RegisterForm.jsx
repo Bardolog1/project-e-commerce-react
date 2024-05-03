@@ -22,22 +22,45 @@ const RegisterForm = () => {
           Register
         </TextDefault>
         <form className="Register-form">
-          <InputDefault type="text" placeholder="Username" darkMode={true} />
-          <InputDefault type="text" placeholder="Your Name" darkMode={true} />
           <InputDefault
+          required
+          decorated={true}
+          label="Username"
+          type="text" 
+          
+          darkMode={true} />
+          <InputDefault 
+           required
+            decorated={true}
+          label="Name" 
+          type="text" 
+          
+          darkMode={true} />
+          <InputDefault
+            required
+            decorated={true}
+            label="LastName"
             type="text"
-            placeholder="Your Last Name"
             darkMode={true}
           />
-          <InputDefault type="text" placeholder="E-Mail" darkMode={true} />
+          <InputDefault required
+            decorated={true}
+            label="E-Mail" 
+            type="text" 
+            
+            darkMode={true} />
           <InputDefault
+            required
+            decorated={true}
+            label="Password"
             type="password"
-            placeholder="password"
             darkMode={true}
           />
           <InputDefault
+            required
+            decorated={true}
+            label="Verify password"
             type="password"
-            placeholder="verify password"
             darkMode={true}
           />
          

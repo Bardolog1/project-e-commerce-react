@@ -4,6 +4,7 @@
     
     --primary-color-fixed: #ffef0a;
     --primary-color-text-fixed: #333;
+    --secondary-color-text-fixed: #6b6b6b;
     
     --body-background: #f5f5f5;
     --primary-color: #333;
@@ -12,13 +13,14 @@
 [data-theme='dark']{
     --body-background: rgb(52,52,52);
     --primary-color: #f5f5f5;
+    --primary-color-text-contrast: #ffef0a;
 
 }
 
 [data-theme='light']{
     --body-background: #f5f5f5;
     --primary-color: #333;
-   
+    --primary-color-text-contrast: #000000;
 }
 
 *{

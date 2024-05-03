@@ -89,7 +89,7 @@ const RegisterForm = () => {
                   darkMode
                 />
 
-                <ButtonDefault style={styles.buttonRegister} darkMode={true}>
+                <ButtonDefault style={styles.buttonRegister} darkMode={true} onClick={handleSubmit}>
                   <TextDefault type="buttonText" darkMode={false}>
                     Sign up
                   </TextDefault>

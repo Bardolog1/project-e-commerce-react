@@ -44,7 +44,7 @@ const Input = styled.input`
   }
   
   &.error {
-    border: 1px solid red;
+    border: 1px solid #FF4848;
   }
   
  
@@ -65,12 +65,6 @@ const Label = styled.label`
     transform: translate(-50%, -50%) scale(0.9);
   }
   
-  &.error {
-    color: red;
-  }
-  
-  
-  
   
 `;
 
@@ -79,7 +73,7 @@ const styles = {
       position: 'absolute',
       left: '0.5rem',
       bottom: '-30%',
-      color: 'red',
+      color: '#FF4848',
       fontSize: '0.8rem',
   }
 }
@@ -101,7 +95,7 @@ const InputDefault = ({ ...props }) => {
         {...props}
       />
       {props.decorated && (
-        <Label className={ `${props.darkMode ? "ambiented" : ""} ${props.error? " error " : " "}`} id={props.label}>
+        <Label className={ `${props.darkMode ? "ambiented" : ""} `} id={props.label}>
           {props.label}
         </Label>
       )}

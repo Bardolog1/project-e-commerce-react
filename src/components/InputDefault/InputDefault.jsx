@@ -9,6 +9,7 @@ const Input = styled.input`
   border: none;
   width: 100%;
   height: 100%;
+  transition: border 0.6s ease;
 
   &.ambiented {
     background-color: transparent;
@@ -19,13 +20,13 @@ const Input = styled.input`
   &.rounded:focus,
   &.rounded:valid {
     border-radius: 10px;
-    transition: border 0.6s ease;
   }
 
   &:focus,
   &:valid {
     outline: none;
     border: 1px solid var(--primary-color-text-contrast);
+   
   }
 
   &:focus ~ label,
@@ -49,8 +50,7 @@ const Label = styled.label`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.8s ease-in, background-color 0s ease, color 0s ease;
-
+  transition: all 0.3s ease-in, background-color 0s ease, color 0s ease;
   z-index: -1;
 
   &:active {

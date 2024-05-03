@@ -1,12 +1,26 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import Login from "./pages/Login/Login.jsx";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 
 function App() {
   const items = [
-    { title: "Home", url: "/", titleActive: "true" },
-    { title: "Best Products", url: "/best", titleActive: "true" },
-    { title: "Offers", url: "/offers", titleActive: "true" },
+    { 
+      title: "Home", 
+      url: "/", 
+      titleActive: "true" 
+    },
+    { 
+      title: "Best Products", 
+      url: "/best", 
+      titleActive: "true" 
+    },
+    { 
+      title: "Offers", 
+      url: "/offers", 
+      titleActive: "true" 
+    },
     {
       title: "Login/Register",
       url: "/logReg",
@@ -26,17 +40,28 @@ function App() {
       titleActive: "false",
     },
   ];
-  
+
   const logo = {
     src: "./public/logo.png",
     alt: "logo",
     redirect: "/",
-    }
+  };
+  
+  
 
   return (
     <>
-      <NavBar items={items} darkMode={true} searchBar={true} logo={logo}/>
-      <Login></Login>
+     
+      <BrowserRouter>
+      <NavBar items={items} darkMode={true} searchBar={true} logo={logo} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/LogReg" element={<Login />} />
+          <Route path="/register" element={<Login />} />
+        </Routes>
+        
+      </BrowserRouter>
+     
     </>
   );
 }

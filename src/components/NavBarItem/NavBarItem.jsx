@@ -1,5 +1,6 @@
 import React from 'react'
 import './NavBarItem.css'
+import { Link } from 'react-router-dom'
 
 const NavBarItem = (
     {title, url, ...props}
@@ -7,10 +8,11 @@ const NavBarItem = (
   return (
   <>
     <li>
-        <a href={url}>
+      <Link to={url}>
             {props.titleActive=== 'true'? title : <icon className={props.icon? props.icon : ""} />}
-        </a>
+      </Link>
     </li>
+    
   </>
     
   )

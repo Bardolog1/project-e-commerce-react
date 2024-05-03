@@ -8,6 +8,8 @@
     
     --body-background: #f5f5f5;
     --primary-color: #333;
+    
+    
 }
 
 [data-theme='dark']{
@@ -32,4 +34,5 @@
 body{
     background-color: var(--body-background);
     color: var(--primary-color);
+    transition: background-color 0.6s ease, color 0.6s ease;
 }

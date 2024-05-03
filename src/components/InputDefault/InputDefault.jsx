@@ -16,7 +16,7 @@ const Input = styled.input`
     color: var(--primary-color);
   }
   
-  &:focus {
+  &:focus, &:valid {
     outline: none;
     border: 1px solid var(--primary-color-text-contrast);
   }

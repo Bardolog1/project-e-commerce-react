@@ -28,7 +28,7 @@ function App() {
   ];
   
   const logo = {
-    src: "https://seeklogo.com/images/M/mercado-libre-logo-2322FACE00-seeklogo.com.png",
+    src: "./public/logo.png",
     alt: "logo",
     redirect: "/",
     }

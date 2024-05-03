@@ -49,8 +49,8 @@ const Label = styled.label`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.8s ease-in;
-  transition: background-color 0s ease;
+  transition: all 0.8s ease-in, background-color 0s ease, color 0s ease;
+
   z-index: -1;
 
   &:active {

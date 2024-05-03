@@ -1,6 +1,7 @@
 import React from "react";
 import "./InputDefault.css";
 import styled from "styled-components";
+import TextDefault from "../TextDefault/TextDefault";
 
 const Input = styled.input`
   padding: 10px;
@@ -41,6 +42,13 @@ const Input = styled.input`
     color: var(--primary-color-text-contrast);
     z-index: 1;
   }
+  
+  &.error {
+    border: 1px solid red;
+  }
+  
+ 
+  
 `;
 
 const Label = styled.label`
@@ -56,7 +64,25 @@ const Label = styled.label`
   &:active {
     transform: translate(-50%, -50%) scale(0.9);
   }
+  
+  &.error {
+    color: red;
+  }
+  
+  
+  
+  
 `;
+
+const styles = {
+  error: {
+      position: 'absolute',
+      left: '0.5rem',
+      bottom: '-30%',
+      color: 'red',
+      fontSize: '0.8rem',
+  }
+}
 
 const InputDefault = ({ ...props }) => {
   return (
@@ -65,17 +91,21 @@ const InputDefault = ({ ...props }) => {
         required={props.required}
         id={props.label}
         type={props.type}
+       
         placeholder={props.decorated ? "" : props.label}
-        className={`${props.darkMode ? "ambiented" : ""} ${
-          props.rounded ? "rounded" : ""
-        }`}
+        className={`
+        ${props.darkMode ? "ambiented" : ""} 
+        ${props.rounded ? "rounded" : ""}
+        ${props.error? "error" : ""}
+        `}
         {...props}
       />
       {props.decorated && (
-        <Label className={props.darkMode ? "ambiented" : ""} id={props.label}>
+        <Label className={ `${props.darkMode ? "ambiented" : ""} ${props.error? " error " : " "}`} id={props.label}>
           {props.label}
         </Label>
       )}
+      {props.error &&  <TextDefault style={styles.error}>{props.error}</TextDefault>}
     </div>
   );
 };

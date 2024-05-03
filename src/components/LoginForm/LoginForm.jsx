@@ -5,15 +5,12 @@ import InputDefault from "../InputDefault/InputDefault";
 import ButtonDefault from "../ButtonDefault/ButtonDefault";
 
 const LoginForm = () => {
-
   const styles = {
-    buttonLogin : {
+    buttonLogin: {
       width: "100%",
       height: "40px",
-      
-    }
-  }
-
+    },
+  };
 
   return (
     <>
@@ -23,21 +20,23 @@ const LoginForm = () => {
         </TextDefault>
         <form className="formLogin">
           <InputDefault
-          required
-            decorated={true}
-            label="Username" 
-            type="text" 
-            darkMode={true} 
+            required
+            decorated
+            label="Username"
+            type="text"
+            darkMode
           />
           <InputDefault
             required
-            decorated={true}
+            decorated
             label="Password"
             type="password"
-            darkMode={true}
+            darkMode
           />
           <ButtonDefault style={styles.buttonLogin} darkMode={true}>
-            <TextDefault type="buttonText" darkMode={false}>Access</TextDefault>
+            <TextDefault type="buttonText" darkMode={false}>
+              Access
+            </TextDefault>
           </ButtonDefault>
         </form>
       </div>

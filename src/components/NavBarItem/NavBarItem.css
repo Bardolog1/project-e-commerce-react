@@ -1,9 +1,31 @@
  li {
     list-style: none;
     display: inline;
+    padding: 10px;
+    
 }
 
-li a{
+.nav-item{
+    position: relative;
+    display: inline;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.nav-item .nav-link{
     color: var(--primary-color-text-fixed);
     text-decoration: none;
+}
+
+
+
+.nav-item:hover{
+    transform: scale(1.1);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-item:active{
+    transform: scale(0.98);
 }

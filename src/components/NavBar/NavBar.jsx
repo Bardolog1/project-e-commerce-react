@@ -8,19 +8,19 @@ import { Link } from "react-router-dom";
 const NavBar = ({ items, ...props }) => {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" {...props}>
         <div className="container-navbar">
           <div className="left">
             <div className="logo">
-              <a href={props.logo.redirect} rel="noreferrer">
+              <Link to={props.logo.redirect} rel="noreferrer">
                 <img src={props.logo.src} alt={props.logo.alt} />
-              </a>
+              </Link>
             </div>
           </div>
 
           <ul className="right">
             {props.searchBar ? (
-              <li>
+              <li className="search-bar">
                 {" "}
                 <SearchBar></SearchBar>{" "}
               </li>
@@ -37,7 +37,7 @@ const NavBar = ({ items, ...props }) => {
           
             ))}
             {props.darkMode ? (
-              <li>
+              <li className="toggle">
                 {" "}
                 <ToggleButton> </ToggleButton>
               </li>

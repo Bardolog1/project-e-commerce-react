@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components'
-
 
 
 const Container = styled.div`
@@ -11,12 +10,12 @@ const Container = styled.div`
   width: 100vw;
   flex-direction: column;
   font-size: 2rem;
-
 `;
-const Offers = ({...props}) => {
+
+const BestProducts = ({...props}) => {
   return (
-    <Container {...props}>Offers</Container>
+    <Container {...props}>Best Products</Container>
   )
 }
 
-export default Offers
+export default BestProducts

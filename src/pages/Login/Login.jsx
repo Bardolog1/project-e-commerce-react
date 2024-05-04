@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./Login.css";
-import InputDefault from "../../components/InputDefault/InputDefault.jsx";
 import TextDefault from "../../components/TextDefault/TextDefault.jsx";
 import LoginForm from "../../components/LoginForm/LoginForm.jsx";
 import RegisterForm from "../../components/RegisterForm/RegisterForm.jsx";
 
-const Login = () => {
+const Login = ({...props}) => {
   const [loginOrRegister, setLoginOrRegister] = useState("register");
 
   /*Stylesheet*/
@@ -19,7 +18,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="login">
+      <div className="login" {...props}>
         <div className="container-login">
           {loginOrRegister === "login" ? (
             <>

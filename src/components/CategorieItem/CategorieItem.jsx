@@ -25,12 +25,38 @@ const Card = styled.div`
     transform: scale(1.1);
     border: 1px solid var(--primary-color-fixed);
   }
+  
+  & i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+  }
+  
+  & p {
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+  }
+  
+  &:hover i, &:hover p{
+    text-shadow: 0 0 10px var(--primary-color-fixed);
+  }
+  
+  
 `;
+
+
+const styles = {
+    link: {
+        textDecoration: "none",
+    }
+}
 
 const CategorieItem = ({...props}) => {
   return (
     <>  
-        <Link to={"/categories"+props.url}>
+        <Link style={styles.link} to={"/categories"+props.url}>
             <Card>
                 <i className={props.icon}></i>
                 <p>{props.title}</p>

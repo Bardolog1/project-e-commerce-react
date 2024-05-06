@@ -47,15 +47,13 @@ const DropDown = styled.div`
     
 `
 
-
-
-const DropDownMenu = ({ items,isOpened, ...props }) => {
+const DropDownMenu = ({ items,isOpened, style, ...props }) => {
   return (
-    <DropDown className={isOpened ? "open" : "close"} {...props}>
+    <DropDown className={isOpened ? "open" : "close"} style={style}>
       <ul className="dropdown-menu">
         {items &&
           items.map((item) => (
-            <DropDownItem key={item.id} img={""} text={item.title} url={item.url}></DropDownItem>
+            <DropDownItem key={item.id} img={""} text={item.title} url={item.url} ></DropDownItem>
           ))}
       </ul>
     </DropDown>

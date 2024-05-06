@@ -23,8 +23,6 @@ const NavBar = ({ items, ...props }) => {
   
   useEffect(() => {
     changeBackground();
-    console.log(scrollPosition);
-    console.log(navBarBackground);
   },[scrollPosition]);
   
 /*listen active item*/
@@ -38,12 +36,10 @@ const NavBar = ({ items, ...props }) => {
   
   const setItemActive = (k) => {
     setActiveItem(k);
-    console.log(k);
   }
   
   const setActiveDropDown = (k) => {
     setActiveDropDownItem(k);
-    console.log(k);
   }
   
 

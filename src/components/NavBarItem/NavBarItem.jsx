@@ -14,31 +14,12 @@ const NavBarItem = ({
   activeDropDownItem,
   ...props
 }) => {
-  const [isClicked, setIsClicked] = useState(false);
-  const animationClick = (k) => {
-    document.querySelectorAll(".nav-item").forEach((element) => {
-      if (id == element.id) {
-        element.classList.add("animation");
-        setItemActive(k);
-        if(props.hasDropdown){
-          setActiveDropDown(k);
-        }
-        if (isClicked) {
-          setIsClicked(false);
-        } else {
-          setIsClicked(true);
-        }
-        setTimeout(() => {
-          element.classList.remove("animation");
-        }, 3000);
-      }
-    });
-  };
+  const [opened, setOpened] = useState(false);
 
   const styles = {
     drop: {
       position: "absolute",
-      top: "100%",
+      top: "250%",
       left: "-100%",
       width: "200px",
       height: "auto",
@@ -46,16 +27,54 @@ const NavBarItem = ({
     },
   };
 
+  useEffect(() => {
+    if (activeDropDownItem != id) {
+      setOpened(false);
+    }
+  }, [activeDropDownItem]);
+
+  const animationClick = (k) => {
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach((item) => {
+      if (item.id == k) {
+        if (item.classList.contains("active")) {
+          item.classList.remove("active");
+        } else {
+          if (!props.hasDropdown) {
+            item.classList.add("active");
+            setItemActive(k);
+          } else {
+            setActiveDropDown(k);
+
+            if (opened) {
+              setOpened(false);
+            } else {
+              setOpened(true);
+            }
+          }
+        }
+
+        item.classList.add("animation");
+        setTimeout(() => {
+          item.classList.remove("animation");
+        }, 3000);
+      }
+    });
+  };
+
   return (
     <>
       <Link
         className={`nav-link ${navScroll ? " navScroll" : ""} `}
         to={url}
-        onClick={() => animationClick(id)}
+        onClickCapture={() => animationClick(id)}
       >
         <li
           id={id}
-          className={` nav-item ${activeItem === id && !props.hasDropdown ? "active" : ""}`}
+          className={` nav-item ${
+            activeItem === id && !props.hasDropdown ? "active" : ""
+          }`}
         >
           {props.titleActive === "true" ? (
             title
@@ -63,9 +82,9 @@ const NavBarItem = ({
             <icon className={props.icon ? props.icon : ""} />
           )}
         </li>{" "}
-        {props.hasDropdown &&  (
+        {props.hasDropdown && (
           <DropDownMenu
-            isOpened={ activeDropDownItem === id && activeItem === id }
+            isOpened={opened}
             style={styles.drop}
             items={props.dropdownItems}
           />

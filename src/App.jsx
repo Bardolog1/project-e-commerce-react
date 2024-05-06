@@ -13,19 +13,22 @@ function App() {
       id: 1,
       title: "Home", 
       url: "/", 
-      titleActive: "true" 
+      titleActive: "true",
+      hasDropdown: false,
     },
     { 
       id: 2,
       title: "Best Products", 
       url: "/best", 
-      titleActive: "true" 
+      titleActive: "true",
+      hasDropdown: false,
     },
     { 
       id: 3,
       title: "Offers", 
       url: "/offers", 
-      titleActive: "true" 
+      titleActive: "true",
+      hasDropdown: false,
     },
     {
       id: 4,
@@ -33,28 +36,50 @@ function App() {
       url: "/logReg",
       icon: "fa-solid fa-right-to-bracket",
       titleActive: "false",
+      hasDropdown: false,
     },
     {
       id: 5,
       title: "Cart",
-      url: "/cart",
       icon: "fa-solid fa-shopping-cart",
       titleActive: "false",
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          id: 1, 
+          title: "Profile",
+          url: "/profile"
+        }, 
+        {
+          id: 2, 
+          title: "Log out",
+          url: "/logReg"
+        },
+        {
+          id: 3, 
+          title: "Profile",
+          url: "/profile"
+        },
+        {
+          id: 4, 
+          title: "Log out",
+          url: "/logReg"
+        },
+        
+      ],
     },
     {
-      id: 5,
+      id: 6,
       title: "Profile",
-      url: "/profile",
       icon: "fa-solid fa-user",
       titleActive: "false",
+      hasDropdown: true,
+      dropdownItems: [{id: 1, title: "Profile", url: "/profile"}, {id: 2, title: "Log out", url: "/logReg"}],
+      
     },
   ];
 
-  const logo = {
-    src: "./public/images/logo.png",
-    alt: "logo",
-    redirect: "/",
-  };
+
   
   const styles = {
       elementsContainer: {
@@ -85,7 +110,7 @@ function App() {
     <>
      
       <BrowserRouter>
-      <NavBar items={items} darkMode={true} searchBar={true} logo={logo} style={styles.navBar}/>
+      <NavBar items={items} darkMode={true} searchBar={true}  style={styles.navBar}/>
         <Routes >
           <Route path="/" element={<HomePage style={styles.elementsContainer} />}  />
           <Route path="/LogReg" element={<Login style={ styles.elementWithMarginTop} />} />

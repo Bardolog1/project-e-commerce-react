@@ -10,9 +10,7 @@ const NavBar = ({ items, ...props }) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navBarBackground, setNavBarBackground] = useState(false);
-  
- /*detectar posición del scroll vertical*/
-  
+ 
   useEffect(() => {
     const updateScroll = () => {
       setScrollPosition(window.scrollY);
@@ -27,7 +25,7 @@ const NavBar = ({ items, ...props }) => {
     console.log(navBarBackground);
   },[scrollPosition]);
   
-  /*cambiar background barra navbar*/
+
   
   const changeBackground = () => {
     if (scrollPosition >= 500) {
@@ -38,13 +36,6 @@ const NavBar = ({ items, ...props }) => {
   }
   
   
-   const styles =  {
-    logo: {
-      width: "100%",
-    }
-  
-  }
-  
 
   return (
     <>
@@ -52,7 +43,7 @@ const NavBar = ({ items, ...props }) => {
         <div className="container-navbar">
           <div className="left">
             <div className="logo">
-              <Link to={props.logo.redirect} rel="noreferrer">
+              <Link to={"/"} rel="noreferrer">
                 <Logo className="logoSVG"  darkMode={navBarBackground}/>
               </Link>
             </div>
@@ -65,20 +56,23 @@ const NavBar = ({ items, ...props }) => {
               </li>
             ) : null}
             {items.map((item) => (
-             
+              
                 <NavBarItem
+                  id={item.id}
                   key={item.id}
                   title={item.title}
                   url={item.url}
                   icon={item.icon}
                   titleActive={item.titleActive}
                   navScroll={navBarBackground}
+                  hasDropdown={item.hasDropdown}
+                  dropdownItems={item.dropdownItems}
+                  
                 />
           
             ))}
             {props.darkMode ? (
               <li className="toggle">
-                {" "}
                 <ToggleButton> </ToggleButton>
               </li>
             ) : null}

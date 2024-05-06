@@ -18,7 +18,6 @@ const NavBarItem = ({
 
   const styles = {
     drop: {
-      
       position: "absolute",
       top: "250%",
       left: "-100%",
@@ -87,6 +86,7 @@ const NavBarItem = ({
             isOpened={opened}
             style={styles.drop}
             title={title}
+            changeOpen={setOpened}
             items={props.dropdownItems}
           />
         )}

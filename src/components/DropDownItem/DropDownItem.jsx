@@ -5,28 +5,27 @@ import styled from "styled-components";
 const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
-  margin: 10px  auto;
+  margin: 10px auto;
   padding: 5px 10px;
-  
+
   & .iconItem {
-      max-width: 20px;
-      margin-right: 10px;
-      opacity: 0.5;
-      color: var(--primary-color);
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    color: var(--primary-color);
   }
-  
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color: var(--primary-color-text-contrast);
     transition: all 0.5s ease;
   }
-  
-  
+
   &:hover .dropdown-item .iconItem {
     opacity: 1;
   }
-  
+
   &:hover .dropdown-item span {
     cursor: pointer;
   }
@@ -51,17 +50,13 @@ const DropDownItem = ({ id, text, url, icon, style, ...props }) => {
     maxWidth: "200px",
     marginLeft: "10px",
   };
-  
- 
 
-  const linkHandler = (event) => {
-  };
+  const linkHandler = (event) => {};
 
   return (
-    <StyledLink to={url} style={style} >
-   
+    <StyledLink to={url} style={style}>
       <Item id={id} className="dropdown-item" {...props}>
-         <i className={icon + " " + "iconItem"}/>
+        <i className={icon + " " + "iconItem"} />
         <span style={spanTextStyles}>{text}</span>
       </Item>
     </StyledLink>

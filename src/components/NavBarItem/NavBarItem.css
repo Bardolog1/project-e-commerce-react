@@ -8,24 +8,57 @@
 .nav-item{
     position: relative;
     display: inline;
-    transition: transform 0.5s ease, background-color 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, border-radius 0.5s ease;
     cursor: pointer;
     height: 100%;
+    border-radius: 20px;
 }
 
 .nav-item .nav-link{
-    color: var(--primary-color-text-fixed);
+    color: var(--navbar-color-item-text-fixed);
+    font-weight: 600;
+    font-size: 1rem;
     text-decoration: none;
+    
+}
+
+.nav-item  .navScroll{
+    color: var(--primary-color-text-fixed);
 }
 
 
 
 .nav-item:hover{
     transform: scale(1.1);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.nav-item:active{
-    transform: scale(0.98);
+.nav-item::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    z-index: -1;
+    
+   
+}
+
+.nav-item:active:after{
+    animation: grow 0.3s ease;
+}
+
+@Keyframes grow {
+    0%{
+        width: 0%;
+        height: 0%;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
 }

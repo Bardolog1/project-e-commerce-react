@@ -1,6 +1,14 @@
 .navbar{
-    background-color: var( --primary-color-fixed);
-    padding: 10px 0;
+    padding: 15px 0;
+    transition: all 0.5s ease;
+}
+
+.with-color{
+    background-color: var(--primary-color-fixed);
+}
+
+.without-color{
+    background-color: RGBA(0, 0, 0, 0.3);
 }
 
 .container-navbar{
@@ -29,7 +37,7 @@
     align-items: center;
 }
 
- .left .logo img{
+ .left .logo .logoSVG{
     width: 80%;
 }
 

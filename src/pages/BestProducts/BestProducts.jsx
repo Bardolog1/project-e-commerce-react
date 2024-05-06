@@ -9,12 +9,20 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 6rem;
+  
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style:  italic;
+  font-variation-settings:
+    "wdth" 100;
+  
 `;
 
 const BestProducts = ({...props}) => {
   return (
-    <Container {...props}>Best Products</Container>
+    <Container {...props}>Fast Banana</Container>
   )
 }
 

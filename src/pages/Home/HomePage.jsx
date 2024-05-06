@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
+import BannerSearcher from '../../components/BannerSearcher/BannerSearcher';
 import CategoriesContainer from '../../components/CategoriesContainer/CategoriesContainer';
-import ProductsContainer from '../../components/ProductsContainer/ProductsContainer'
 
 
 const Container = styled.div`
@@ -15,22 +15,19 @@ const Container = styled.div`
 `;
 
 
-const styles = {
-  categories: {
-    width: '25%',
-    height: '100%',
-  }
-}
-
 const HomePage = ({...props}) => {
 
   return (
-  
-      <Container {...props} >
-        <CategoriesContainer style={styles.categories}/>
-        <ProductsContainer>HomePage</ProductsContainer>
-        
+    <>
+     <Container {...props} >
+        <BannerSearcher />
       </Container>
+      <CategoriesContainer></CategoriesContainer>
+      
+    
+    </>
+     
+  
   )
 }
 

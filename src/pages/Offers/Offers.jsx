@@ -1,7 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-
-
+import React from "react";
+import styled from "styled-components";
+import "./Offers.css";
 
 const Container = styled.div`
   display: flex;
@@ -11,12 +10,14 @@ const Container = styled.div`
   width: 100vw;
   flex-direction: column;
   font-size: 2rem;
-
 `;
-const Offers = ({...props}) => {
+const Offers = ({ ...props }) => {
   return (
-    <Container {...props}>Offers</Container>
-  )
-}
+    <Container {...props}>
+     
+    </Container>
+  );
+};
 
-export default Offers
+export default Offers;
+/* */

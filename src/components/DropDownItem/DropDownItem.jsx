@@ -24,10 +24,12 @@ const StyledLink = styled(Link)`
 
   &:hover .dropdown-item .iconItem {
     opacity: 1;
+    text-shadow: 0 0 10px var(--primary-color-fixed);
   }
 
   &:hover .dropdown-item span {
     cursor: pointer;
+    text-shadow: 0 0 10px var(--primary-color-fixed);
   }
 
   &:active {
@@ -51,7 +53,6 @@ const DropDownItem = ({ id, text, url, icon, style, ...props }) => {
     marginLeft: "10px",
   };
 
-  const linkHandler = (event) => {};
 
   return (
     <StyledLink to={url} style={style}>

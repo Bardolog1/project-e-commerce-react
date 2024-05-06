@@ -44,7 +44,7 @@ function App() {
       icon: "fa-solid fa-shopping-cart",
       titleActive: "false",
       hasDropdown: true,
-      dropdownItems: [{id: 1, title: "All", url: "/"}, {id: 2, title: "All Cart", url: "/cart"}],
+      dropdownItems: [{id: 1, title: "All", url: "/", icon: "fa-solid fa-cart-shopping"}, {id: 2, title: "All Cart", url: "/cart", icon: "fa-solid fa-cart-shopping"}],
      
     },
     {
@@ -56,18 +56,23 @@ function App() {
         {
           id: 1, 
           title: "Profile",
-          url: "/best"
+          url: "/best",
+          icon: "fa-solid fa-user",
         }, 
         {
           id: 2, 
           title: "Login/Register",
-          url: "/logReg"
+          url: "/logReg",
+          icon: "fa-solid fa-right-to-bracket",
+
         },
         
         {
           id: 3, 
           title: "Log out",
           url: "/",
+          icon: "fa-solid fa-right-from-bracket",
+          
         },
         
       ],

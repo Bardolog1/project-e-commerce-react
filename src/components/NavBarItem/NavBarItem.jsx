@@ -23,7 +23,6 @@ const NavBarItem = ({
       top: "250%",
       left: "-100%",
       width: "200px",
-      height: "auto",
       zIndex: "100",
     },
   };
@@ -87,6 +86,7 @@ const NavBarItem = ({
           <DropDownMenu
             isOpened={opened}
             style={styles.drop}
+            title={title}
             items={props.dropdownItems}
           />
         )}

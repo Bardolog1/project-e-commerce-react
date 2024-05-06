@@ -4,14 +4,24 @@ import styled from "styled-components";
 
 
 const DropDown = styled.div`
-    width: 100%;
+    
     position: relative;
     background-color: var(--body-background);
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    display: flex;
     
-    
+    & h3 {
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 10px 0;
+      color: var(--primary-color);
+      line-height: 1rem;
+    }
     
     &::before {
         content: "";
@@ -22,18 +32,6 @@ const DropDown = styled.div`
         width: 20px;
         background-color: var(--body-background);
         transform: rotate(45deg);
-    }
-    
-    & .dropdown-menu {
-        display: flex;
-        position: relative;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-   
     }
     
     
@@ -47,13 +45,21 @@ const DropDown = styled.div`
     
 `
 
-const DropDownMenu = ({ items,isOpened, style, ...props }) => {
+const styles = {
+  childrenDropDown: {
+    borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+  }
+  
+}
+
+const DropDownMenu = ({ items,isOpened, style, title, ...props }) => {
   return (
     <DropDown className={isOpened ? "open" : "close"} style={style}>
       <ul className="dropdown-menu">
+        <h3>{title}</h3>
         {items &&
           items.map((item) => (
-            <DropDownItem key={item.id} img={""} text={item.title} url={item.url} ></DropDownItem>
+            <DropDownItem style={styles.childrenDropDown} key={item.id} icon={item.icon} text={item.title} url={item.url} ></DropDownItem>
           ))}
       </ul>
     </DropDown>

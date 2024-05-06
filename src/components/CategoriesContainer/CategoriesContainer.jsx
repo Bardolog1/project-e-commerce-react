@@ -98,6 +98,80 @@ const categories = [
     url: "/movies",
     icon: "fa-solid fa-film",
   },
+  {
+    id: 13,
+    title: "Garden",
+    url: "/garden",
+    icon: "fa-solid fa-seedling",
+   },
+   {
+      id: 14,
+      title: "Books",
+      url: "/books",
+      icon: "fa-solid fa-book",
+   },
+   {
+      id: 15,
+      title: "Toys",
+      url: "/toys",
+      icon: "fa-solid fa-baby",
+      },
+      {
+         id: 16,
+         title: "Sports",
+         url: "/sports",
+         icon: "fa-regular fa-futbol",
+         }, {
+          id: 9,
+          title: "Tools",
+          url: "/tools",
+          icon: "fa-solid fa-tools",
+        },
+        {
+          id: 10,
+          title: "Cars",
+          url: "/cars",
+          icon: "fa-solid fa-car",
+        },
+        {
+          id: 11,
+          title: "Music",
+          url: "/music",
+          icon: "fa-solid fa-music",
+        },
+        {
+          id: 12,
+          title: "Movies",
+          url: "/movies",
+          icon: "fa-solid fa-film",
+        },
+        {
+          id: 13,
+          title: "Garden",
+          url: "/garden",
+          icon: "fa-solid fa-seedling",
+         },
+         {
+            id: 14,
+            title: "Books",
+            url: "/books",
+            icon: "fa-solid fa-book",
+         },
+         {
+            id: 15,
+            title: "Toys",
+            url: "/toys",
+            icon: "fa-solid fa-baby",
+            },
+            {
+               id: 16,
+               title: "Sports",
+               url: "/sports",
+               icon: "fa-regular fa-futbol",
+               }
+      
+   
+   
 ];
 
 const CategoriesContainer = ({ ...props }) => {

@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const BestProducts = ({...props}) => {
   return (
-    <Container {...props}>Fast Banana</Container>
+    <Container {...props}><h1>Best Products</h1></Container>
   )
 }
 

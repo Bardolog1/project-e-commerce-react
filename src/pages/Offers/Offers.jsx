@@ -14,7 +14,7 @@ const Container = styled.div`
 const Offers = ({ ...props }) => {
   return (
     <Container {...props}>
-     
+      <h1>Offers</h1>
     </Container>
   );
 };

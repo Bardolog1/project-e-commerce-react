@@ -44,37 +44,34 @@ function App() {
       icon: "fa-solid fa-shopping-cart",
       titleActive: "false",
       hasDropdown: true,
-      dropdownItems: [
-        {
-          id: 1, 
-          title: "Profile",
-          url: "/profile"
-        }, 
-        {
-          id: 2, 
-          title: "Log out",
-          url: "/logReg"
-        },
-        {
-          id: 3, 
-          title: "Profile",
-          url: "/profile"
-        },
-        {
-          id: 4, 
-          title: "Log out",
-          url: "/logReg"
-        },
-        
-      ],
+      dropdownItems: [{id: 1, title: "All", url: "/"}, {id: 2, title: "All Cart", url: "/cart"}],
+     
     },
     {
       id: 6,
       title: "Profile",
       icon: "fa-solid fa-user",
       titleActive: "false",
-      hasDropdown: true,
-      dropdownItems: [{id: 1, title: "Profile", url: "/profile"}, {id: 2, title: "Log out", url: "/logReg"}],
+      hasDropdown: true, dropdownItems: [
+        {
+          id: 1, 
+          title: "Profile",
+          url: "/best"
+        }, 
+        {
+          id: 2, 
+          title: "Login/Register",
+          url: "/logReg"
+        },
+        
+        {
+          id: 3, 
+          title: "Log out",
+          url: "/",
+        },
+        
+      ],
+     
       
     },
   ];

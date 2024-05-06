@@ -10,6 +10,8 @@ const NavBar = ({ items, ...props }) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navBarBackground, setNavBarBackground] = useState(false);
+  const [activeItem, setActiveItem] = useState(0);
+  const [activeDropDownItem, setActiveDropDownItem] = useState(0);
  
   useEffect(() => {
     const updateScroll = () => {
@@ -25,8 +27,26 @@ const NavBar = ({ items, ...props }) => {
     console.log(navBarBackground);
   },[scrollPosition]);
   
-
+/*listen active item*/
+  useEffect(() => {
+    const changeActiveItem = () => {
+      const index = items.findIndex((item) => item.url === window.location.pathname);
+      setActiveItem(index);
+    };
+    changeActiveItem();
+  }, []);
   
+  const setItemActive = (k) => {
+    setActiveItem(k);
+    console.log(k);
+  }
+  
+  const setActiveDropDown = (k) => {
+    setActiveDropDownItem(k);
+    console.log(k);
+  }
+  
+
   const changeBackground = () => {
     if (scrollPosition >= 500) {
       setNavBarBackground(true);
@@ -34,6 +54,8 @@ const NavBar = ({ items, ...props }) => {
       setNavBarBackground(false);
     }
   }
+  
+  
   
   
 
@@ -58,6 +80,10 @@ const NavBar = ({ items, ...props }) => {
             {items.map((item) => (
               
                 <NavBarItem
+                  activeItem={activeItem}
+                  setItemActive={setItemActive}
+                  setActiveDropDown={setActiveDropDown}
+                  activeDropDownItem={activeDropDownItem}
                   id={item.id}
                   key={item.id}
                   title={item.title}

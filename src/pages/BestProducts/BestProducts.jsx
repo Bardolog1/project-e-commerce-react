@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import Recibir from '../../components/DataProviders/Recibir';
 
 
 const Container = styled.div`
@@ -22,7 +23,7 @@ const Container = styled.div`
 
 const BestProducts = ({...props}) => {
   return (
-    <Container {...props}><h1>Best Products</h1></Container>
+    <Container {...props}><Recibir/></Container>
   )
 }
 

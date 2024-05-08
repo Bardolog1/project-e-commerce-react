@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Offers from "./pages/Offers/Offers.jsx";
 import Cart from "./pages/Cart/Cart";
 import BestProducts from "./pages/BestProducts/BestProducts.jsx";
+import Profile from "./pages/Profile/Profile.jsx";
 
 function App() {
   const items = [
@@ -64,7 +65,7 @@ function App() {
         {
           id: 1,
           title: "Profile",
-          url: "/best",
+          url: "/profile",
           icon: "fa-solid fa-user",
         },
         {
@@ -102,7 +103,7 @@ function App() {
       position: "fixed",
       top: 0,
       left: 0,
-      zIndex: 1,
+      zIndex: 1000,
     },
   };
 
@@ -142,7 +143,7 @@ function App() {
           />
           <Route
             path="/profile"
-            element={<Login style={styles.elementWithMarginTop} />}
+            element={<Profile style={styles.elementWithMarginTop} />}
           />
         </Routes>
       </BrowserRouter>

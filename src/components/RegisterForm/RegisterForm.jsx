@@ -6,8 +6,9 @@ import ButtonDefault from "../ButtonDefault/ButtonDefault";
 import { Formik } from "formik";
 import { registerSchema } from "../../validationSchemas/validationsRegister";
 import FormikField from "../FormikField/FormikField";
+import styled from "styled-components";
 
-const RegisterForm = () => {
+const RegisterForm = ({...props}) => {
   const initialValues = {
     username: "",
     name: "",
@@ -16,6 +17,7 @@ const RegisterForm = () => {
     password: "",
     verifyPassword: "",
   };
+  
 
   const styles = {
     buttonRegister: {
@@ -27,8 +29,8 @@ const RegisterForm = () => {
 
   return (
     <>
-      <div className="register-form">
-        <TextDefault type="title" darkMode={true}>
+      <div className="register-form" >
+        <TextDefault  type="title" darkMode={true} > 
           Register
         </TextDefault>
 
@@ -39,7 +41,7 @@ const RegisterForm = () => {
         >
           {({ handleSubmit }) => {
             return (
-              <form className="Register-form">
+              <form className="FormRegister">
                 <FormikField
                   name="username"
                   required
@@ -79,12 +81,13 @@ const RegisterForm = () => {
                   label="Password"
                   type="password"
                   darkMode
+                  secureTextEntry
                 />
                 <FormikField
                   name="repeatPassword"
                   required
                   decorated
-                  label="Verify password"
+                  label="Confirm Password"
                   type="password"
                   darkMode
                 />

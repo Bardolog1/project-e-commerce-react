@@ -1,16 +1,94 @@
 .login{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-.container-login{
+.container-all-login{
+    position:relative;
+   /* background-color: #f5f5f549;*/
+    border-radius: 20px;
+    max-width: 90%;
+    max-height: 100%;
+    width: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+    
 }
+
+.container-login{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container-login .image-space{
+    position: absolute;
+    width: 55%;
+    margin: 0 5%;
+    height: 90%;
+    overflow: hidden;
+    z-index: 100;
+    border-radius: 20px;
+    top: 5%;
+    left: -5%;
+    transition: all 0.8s ease;
+}
+
+.space{
+    transition: all 1.5s ease;
+
+}
+
+.container-login .image-space .image{
+    height: 100%;
+}
+
+
+.container-login .activeSpace{
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-login .hideSpace{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.Login-Space{
+    width: 50%;
+    height: 100%;
+}
+
+.Image-Login{
+    width: 50%;
+    height: 100%;
+}
+
+.Register-Space{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.Image-Register{
+    width: 50%;
+    height: 100%;
+}
+
 
 .options-select{
     width: 100%;

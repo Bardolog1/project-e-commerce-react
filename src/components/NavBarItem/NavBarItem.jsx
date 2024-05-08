@@ -22,7 +22,7 @@ const NavBarItem = ({
       top: "250%",
       left: "-100%",
       width: "200px",
-      zIndex: "100",
+      zIndex: "700",
     },
   };
 

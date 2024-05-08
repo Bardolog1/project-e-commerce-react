@@ -6,7 +6,7 @@ import TextDefault from "../TextDefault/TextDefault";
 const Input = styled.input`
   padding: 10px;
   margin: 10px;
-  font-size: 1rem;
+  font-size: rem;
   border: none;
   width: 100%;
   height: 100%;
@@ -34,6 +34,7 @@ const Input = styled.input`
   &:valid ~ label {
     top: 0;
     left: 2%;
+    width: auto;
     background-color: var(--body-background);
     padding: 0 5%;
     border-radius: 20px;
@@ -52,18 +53,18 @@ const Input = styled.input`
 `;
 
 const Label = styled.label`
-  font-size: 1em;
+  font-size: 0.8rem;
   position: absolute;
   color: var(--secondary-color-text-fixed);
   left: 50%;
   top: 50%;
+  width: auto;
+  text-align: center;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease-in, background-color 0s ease, color 0s ease;
+  transition: all 0.5s ease-in, background-color 0s ease, color 0s ease, width 0s ease;
   z-index: -1;
 
-  &:active {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
+  
   
   
 `;
@@ -82,6 +83,7 @@ const InputDefault = ({ ...props }) => {
   return (
     <div className="input-default">
       <Input
+        autoFillField="off"
         required={props.required}
         id={props.label}
         type={props.type}

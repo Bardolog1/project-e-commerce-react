@@ -51,7 +51,7 @@ const DropDown = styled.div`
 
 const styles = {
   childrenDropDown: {
-    borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+    borderTop: "1px solid rgba(0, 0, 0, 0.05)",
   },
 };
 

@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Loading from "../Loading/Loading";
 
-const Recibir = () => {
+function Recibir (){
   const [datos, setDatos] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:3001/about')
       .then((response) => response.json())
       .then((data) => {
+      console.log(data);
       setTimeout(() => {
+        console.log(data);
         setDatos(data);
       }, 5000);
        
-      }).catch((err) => console.log(err));
+      });
   }, []);
 
   return (

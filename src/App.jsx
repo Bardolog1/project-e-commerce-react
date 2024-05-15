@@ -116,35 +116,14 @@ function App() {
           searchBar={true}
           style={styles.navBar}
         />
+       
         <Routes>
-          <Route
-            path="/"
-            element={<HomePage style={styles.elementsContainer} />}
-          />
-          <Route
-            path="/LogReg"
-            element={<Login style={styles.elementWithMarginTop} />}
-          />
-          <Route
-            path="/offers"
-            element={<Offers style={styles.elementsContainer} />}
-          />
-          <Route
-            path="/register"
-            element={<Login style={styles.elementWithMarginTop} />}
-          />
-          <Route
-            path="/best"
-            element={<BestProducts style={styles.elementsContainer} />}
-          />
-          <Route
-            path="/cart"
-            element={<Cart style={styles.elementsContainer} />}
-          />
-          <Route
-            path="/profile"
-            element={<Profile style={styles.elementWithMarginTop} />}
-          />
+          <Route path="/" element={<HomePage style={styles.elementsContainer} />} />
+          <Route path="/best" element={<BestProducts style={styles.elementWithMarginTop}/>} />
+          <Route path="/offers" element={<Offers style={styles.elementWithMarginTop} />} />
+          <Route path="/logReg" element={<Login  style={styles.elementWithMarginTop}/>} />
+          <Route path="/cart" element={<Cart style={styles.elementWithMarginTop}/>} />
+          <Route path="/profile" element={<Profile style={styles.elementWithMarginTop}/>} />
         </Routes>
       </BrowserRouter>
     </>

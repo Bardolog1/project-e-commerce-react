@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import Recibir from '../../components/DataProviders/Recibir';
+import GetAllProducts from '../../components/DataProviders/GetAllProducts';
+import ProductCard from '../../components/ProductCard/ProductCard';
 
 
 const Container = styled.div`
@@ -23,7 +24,9 @@ const Container = styled.div`
 
 const BestProducts = ({...props}) => {
   return (
-    <Container {...props}><Recibir/></Container>
+    <Container {...props}>
+      <GetAllProducts/>
+    </Container>
   )
 }
 
